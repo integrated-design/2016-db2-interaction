@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="App"/>
+    <classEntry path="core.delegate.DelegateCollector"/>
+    <classEntry path="core.delegate.DelegateFunction"/>
+    <classEntry path="core.enum.Config"/>
+    <classEntry path="core.reactor.BaseReactor"/>
+    <classEntry path="core.reactor.KeyboardReactor"/>
+    <classEntry path="core.reactor.MouseReactor"/>
+    <classEntry path="core.reactor.ResizeReactor"/>
+    <classEntry path="core.reactor.SoundReactor"/>
+    <classEntry path="core.util.ColorUtil"/>
+    <classEntry path="core.util.EnterFrameIntegrator"/>
+    <classEntry path="core.util.Logger"/>
+    <classEntry path="core.animation.MovieClipController"/>
+    <classEntry path="core.util.MathUtil"/>
+    <classEntry path="core.util.Mean"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

@@ -1,0 +1,66 @@
+#----- General
+*/bin/*
+!*/bin/data/
+/bin/*
+!/bin/data/
+build/
+obj/
+*.o
+Debug*/
+Release*/
+*.mode*
+*.app/
+*.pyc
+.svn/
+old/
+tmp/
+
+
+#----- Linux
+*~
+# KDE
+.directory
+
+
+#----- OSX
+Icon
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+._*
+*.swp
+*~.nib
+
+
+#----- Windows
+Thumbs.db
+Desktop.ini
+
+
+#----- Android
+.csettings
+
+
+#----- IDEA
+.idea
+*.iml
+
+#----- ActionScript
+bin/
+bin-debug/
+bin-release/
+bin-release-tmp/
+bin-release-temp/
+
+# FlashBuilderProject
+#.actionScriptProperties
+#.project
+#.settings/
+
+#----- App
+*.apk
+*.ipa
+*.app
+*.exe
