@@ -24,7 +24,7 @@ package core.delegate
 			_onMouseDown = new DelegateFunction(target, "onMouseDown");
 			_onMouseUp = new DelegateFunction(target, "onMouseUp");
 
-			_onMouseMoveStart = new DelegateFunction(target, "onMoveStart");
+			_onMouseMoveBegin = new DelegateFunction(target, "onMoveBegin");
 			_onMouseMove = new DelegateFunction(target, "onMove");
 			_onMouseMoveEnd = new DelegateFunction(target, "onMoveEnd");
 
@@ -33,7 +33,7 @@ package core.delegate
 			_onKeyDown = new DelegateFunction(target, "onKeyDown");
 			_onKeyUp = new DelegateFunction(target, "onKeyUp");
 
-			_onSoundStart = new DelegateFunction(target, "onSoundStart");
+			_onSoundBegin = new DelegateFunction(target, "onSoundBegin");
 			_onSound = new DelegateFunction(target, "onSound");
 			_onSoundEnd = new DelegateFunction(target, "onSoundEnd");
 
@@ -149,6 +149,17 @@ package core.delegate
 		}
 
 		//--------------------------------------
+		// onMouseMoveBegin 
+		//--------------------------------------
+
+		private var _onMouseMoveBegin:DelegateFunction;
+
+		public function get onMouseMoveBegin():DelegateFunction
+		{
+			return _onMouseMoveBegin;
+		}
+
+		//--------------------------------------
 		// onMouseMoveEnd 
 		//--------------------------------------
 
@@ -157,17 +168,6 @@ package core.delegate
 		public function get onMouseMoveEnd():DelegateFunction
 		{
 			return _onMouseMoveEnd;
-		}
-
-		//--------------------------------------
-		// onMouseMoveStart 
-		//--------------------------------------
-
-		private var _onMouseMoveStart:DelegateFunction;
-
-		public function get onMouseMoveStart():DelegateFunction
-		{
-			return _onMouseMoveStart;
 		}
 
 		//--------------------------------------
@@ -204,6 +204,17 @@ package core.delegate
 		}
 
 		//--------------------------------------
+		// onSoundBegin 
+		//--------------------------------------
+
+		private var _onSoundBegin:DelegateFunction;
+
+		public function get onSoundBegin():DelegateFunction
+		{
+			return _onSoundBegin;
+		}
+
+		//--------------------------------------
 		// onSoundEnd 
 		//--------------------------------------
 
@@ -212,17 +223,6 @@ package core.delegate
 		public function get onSoundEnd():DelegateFunction
 		{
 			return _onSoundEnd;
-		}
-
-		//--------------------------------------
-		// onSoundStart 
-		//--------------------------------------
-
-		private var _onSoundStart:DelegateFunction;
-
-		public function get onSoundStart():DelegateFunction
-		{
-			return _onSoundStart;
 		}
 
 		//--------------------------------------

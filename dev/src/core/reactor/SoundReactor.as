@@ -13,8 +13,8 @@ package core.reactor
 	 * @author Yukiya Okuda
 	 * @private
 	 *
-	 * function onSoundStart();
-	 * function onSoundStart(volume);
+	 * function onSoundBegin();
+	 * function onSoundBegin(volume);
 	 *
 	 * function onSound();
 	 * function onSound(volume);
@@ -34,7 +34,7 @@ package core.reactor
 		{
 			super(delegate);
 
-			if (delegate.onSoundStart.hasFunction || delegate.onSound.hasFunction || delegate.onSoundEnd.hasFunction)
+			if (delegate.onSoundBegin.hasFunction || delegate.onSound.hasFunction || delegate.onSoundEnd.hasFunction)
 			{
 				_microphone = Microphone.getEnhancedMicrophone();
 				Logger.info("+ Microphone : " + (_microphone ? "[OK]" : "[NG]"));
@@ -83,7 +83,7 @@ package core.reactor
 				else
 				{
 					_isSoundOn = true;
-					delegate.onSoundStart.execute(meanVolume);
+					delegate.onSoundBegin.execute(meanVolume);
 				}
 			}
 			else

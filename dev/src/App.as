@@ -16,7 +16,7 @@ package
 
 	import core.animation.MovieClipController;
 	import core.delegate.DelegateCollector;
-	import core.enum.Config;
+	import core.vars.Config;
 	import core.reactor.CameraReactor;
 	import core.reactor.KeyboardReactor;
 	import core.reactor.MouseReactor;

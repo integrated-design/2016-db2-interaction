@@ -14,8 +14,8 @@ package core.reactor
 	 * function onClick();
 	 * function onClick(x, y);
 	 *
-	 * function onMoveStart();
-	 * function onMoveStart(x, y);
+	 * function onMoveBegin();
+	 * function onMoveBegin(x, y);
 	 *
 	 * function onMove();
 	 * function onMove(x, y);
@@ -226,7 +226,7 @@ package core.reactor
 				else
 				{
 					_isMouseMoving = true;
-					delegate.onMouseMoveStart.execute(_mouseX, _mouseY);
+					delegate.onMouseMoveBegin.execute(_mouseX, _mouseY);
 				}
 
 				if (_isMouseDragging)

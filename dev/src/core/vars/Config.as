@@ -1,4 +1,4 @@
-package core.enum
+package core.vars
 {
 
 	/**

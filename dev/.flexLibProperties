@@ -4,7 +4,7 @@
     <classEntry path="App"/>
     <classEntry path="core.delegate.DelegateCollector"/>
     <classEntry path="core.delegate.DelegateFunction"/>
-    <classEntry path="core.enum.Config"/>
+    <classEntry path="core.vars.Config"/>
     <classEntry path="core.reactor.BaseReactor"/>
     <classEntry path="core.reactor.KeyboardReactor"/>
     <classEntry path="core.reactor.MouseReactor"/>
