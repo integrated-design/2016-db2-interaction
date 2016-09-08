@@ -5,6 +5,10 @@ package core.animation
 
 	import core.util.EnterFrameIntegrator;
 
+	/**
+	 * @author Yukiya Okuda
+	 * @private
+	 */
 	public class MovieClipController
 	{
 
