@@ -17,7 +17,7 @@ package core.vars
 		/**
 		 * バージョン情報
 		 */
-		public static const FRAMEWORK_VERSION:String = "2.0.0";
+		public static const FRAMEWORK_VERSION:String = "2.0.1";
 
 		/**
 		 * プレゼン時の画面解像度

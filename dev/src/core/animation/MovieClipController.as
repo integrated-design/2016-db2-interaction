@@ -48,7 +48,7 @@ package core.animation
 		public function MovieClipController(target:MovieClip):void
 		{
 			_target = target;
-			stop();
+			play();
 		}
 
 		//----------------------------------------------------------
