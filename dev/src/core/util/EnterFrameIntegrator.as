@@ -18,6 +18,7 @@ package core.util
 
 		private static var _listeners:Vector.<Function> = new Vector.<Function>();
 		private static var _ticker:Shape = new Shape();
+		private static var _removingListeners:Vector.<Function> = new Vector.<Function>();
 
 		public static function addEventListener(listener:Function):void
 		{
@@ -31,17 +32,27 @@ package core.util
 
 		public static function removeEventListener(listener:Function):void
 		{
-			var index:int = _listeners.indexOf(listener);
-			if (index != -1)
+			if (_listeners.indexOf(listener) != -1)
 			{
-				_listeners.splice(index, 1);
-				if (_listeners.length == 0)
-					_ticker.removeEventListener(Event.ENTER_FRAME, _enterFrameHandler);
+				if (_removingListeners.indexOf(listener) == -1)
+					_removingListeners.push(listener);
 			}
 		}
 
 		private static function _enterFrameHandler(event:Event):void
 		{
+			while (_removingListeners.length > 0)
+			{
+				var listener:Function = _removingListeners.pop();
+				var index:int = _listeners.indexOf(listener);
+				if (index != -1)
+				{
+					_listeners.splice(index, 1);
+					if (_listeners.length == 0)
+						_ticker.removeEventListener(Event.ENTER_FRAME, _enterFrameHandler);
+				}
+			}
+
 			var n:int = _listeners.length;
 			for (var i:int = 0; i < n; ++i)
 				_listeners[i](event);
