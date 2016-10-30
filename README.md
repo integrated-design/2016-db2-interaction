@@ -1,6 +1,12 @@
 # What's this
 2016年度「デザインベーシック Ⅱ インタラクション」の講義で使うプログラミング教材
 
+正常にコンパイルを通すために以下を守ること
+* flaファイルは新規作成せず、サンプルをコピーして使うこと
+* flaファイルと同階層にframeworkフォルダを配置すること
+
+# Latest package and examples
+[Download 2.0.3](https://github.com/integrated-design/2016-db2-interaction/raw/master/package/2.0.3.zip)
 
 # Release note
 * 2.0.3
