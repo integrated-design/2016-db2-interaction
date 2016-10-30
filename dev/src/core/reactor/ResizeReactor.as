@@ -30,6 +30,7 @@ package core.reactor
 			_stageWidth = stage.stageWidth;
 			_stageHeight = stage.stageHeight;
 
+			_resizeCount = 0;
 			_stage.addEventListener(Event.RESIZE, _resizeHandler);
 		}
 
@@ -38,6 +39,17 @@ package core.reactor
 		//   Property 
 		//
 		//----------------------------------------------------------
+
+		//--------------------------------------
+		// resizeCount 
+		//--------------------------------------
+
+		private var _resizeCount:int;
+
+		public function get resizeCount():int
+		{
+			return _resizeCount;
+		}
 
 		//--------------------------------------
 		// stageHeight 
@@ -73,6 +85,7 @@ package core.reactor
 		{
 			_stageWidth = _stage.stageWidth;
 			_stageHeight = _stage.stageHeight;
+			++_resizeCount;
 			delegate.onResize.execute(_stageWidth, _stageHeight);
 		}
 	}

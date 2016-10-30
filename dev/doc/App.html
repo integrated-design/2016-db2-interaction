@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="style.css" type="text/css" media="screen"><link rel="stylesheet" href="print.css" type="text/css" media="print"><link rel="stylesheet" href="override.css" type="text/css"><meta name="keywords" content="App,globalClassifier.App,PI,clickCount,frameCount,frameRate,isMouseDown,isMouseDragging,milliSeconds,mouseCursorState,mouseSpeed,mouseX,mouseY,pmouseX,pmouseY,stageHeight,stageWidth,vmouseX,vmouseY,acos,asin,atan,ceil,checkMouseOver,choose,convertColorHSV2RGB,convertColorRGB2HSV,cos,floor,getBounds,max,mcGotoAndPlay,mcGotoAndReverse,mcGotoAndStop,mcHide,mcNext,mcPlay,mcPrev,mcReverse,mcShow,mcStop,mcStopAndHide,min,pow,random,round,setColorHEX,setColorHSV,setColorRGB,sin,sqrt,tan"><title>App</title></head><body><script language="javascript" type="text/javascript" src="asdoc.js"></script><script language="javascript" type="text/javascript" src="help.js"></script><script language="javascript" type="text/javascript" src="cookies.js"></script><script language="javascript" type="text/javascript"><!--
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="style.css" type="text/css" media="screen"><link rel="stylesheet" href="print.css" type="text/css" media="print"><link rel="stylesheet" href="override.css" type="text/css"><meta name="keywords" content="App,globalClassifier.App,PI,clickCount,dragCount,frameCount,frameRate,isMouseDown,isMouseDragging,keyDownCount,keyUpCount,milliSeconds,mouseDownCount,mouseSpeed,mouseUpCount,mouseX,mouseY,moveBeginCount,moveCount,moveEndCount,pmouseX,pmouseY,resizeCount,soundBeginCount,soundCount,soundEndCount,stageHeight,stageWidth,vmouseX,vmouseY,acos,asin,atan,ceil,checkMouseOver,choose,convertColorHSV2RGB,convertColorRGB2HSV,cos,floor,getBounds,hideMouseCursor,max,mcGotoAndPlay,mcGotoAndReverse,mcGotoAndStop,mcHide,mcLoop,mcNext,mcNoLoop,mcPlay,mcPrev,mcReverse,mcShow,mcStop,mcStopAndHide,min,pow,random,round,setColorHEX,setColorHSV,setColorRGB,showMouseCursor,sin,sqrt,tan"><title>App</title></head><body><script language="javascript" type="text/javascript" src="asdoc.js"></script><script language="javascript" type="text/javascript" src="help.js"></script><script language="javascript" type="text/javascript" src="cookies.js"></script><script language="javascript" type="text/javascript"><!--
 				asdocTitle = 'App - API Documentation';
 				var baseRef = '';
 				window.onload = configPage;
@@ -13,7 +13,9 @@
 			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">Top Level</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  App</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">App  <img src="images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> flash.display.Sprite</td></tr></table><p></p><p></p><p></p><p></p>
 	 多摩美術大学統合デザイン学科 デザインベーシックⅡ インタラクション
 	 <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#clickCount" class="signatureLink">clickCount</a> : int<div class="summaryTableDescription">[read-only] 
-		 マウスの現在のクリック回数を取得する
+		 onClickの呼び出し回数を取得する
+		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#dragCount" class="signatureLink">dragCount</a> : int<div class="summaryTableDescription">[read-only] 
+		 onDragの呼び出し回数を取得する
 		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#frameCount" class="signatureLink">frameCount</a> : int<div class="summaryTableDescription">[read-only] 
 		 プログラムを起動してから経過したフレーム数
 		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#frameRate" class="signatureLink">frameRate</a> : Number<div class="summaryTableDescription">
@@ -22,20 +24,40 @@
 		 現在マウスのボタンが押されているかどうかを取得する
 		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isMouseDragging" class="signatureLink">isMouseDragging</a> : Boolean<div class="summaryTableDescription">[read-only] 
 		 現在マウスがドラッグされているかどうかを取得する
+		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#keyDownCount" class="signatureLink">keyDownCount</a> : int<div class="summaryTableDescription">[read-only] 
+		 onKeyDownの呼び出し回数を取得する
+		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#keyUpCount" class="signatureLink">keyUpCount</a> : int<div class="summaryTableDescription">[read-only] 
+		 onKeyUpの呼び出し回数を取得する
 		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#milliSeconds" class="signatureLink">milliSeconds</a> : int<div class="summaryTableDescription">[read-only] 
 		 プログラムを起動してから経過したミリ秒数を取得する
-		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#mouseCursorState" class="signatureLink">mouseCursorState</a> : Boolean<div class="summaryTableDescription">
-		 マウスカーソルの状態(trueの場合は現在表示されている)を取得 / 設定する
+		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#mouseDownCount" class="signatureLink">mouseDownCount</a> : int<div class="summaryTableDescription">[read-only] 
+		 onMouseDownの呼び出し回数を取得する
 		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#mouseSpeed" class="signatureLink">mouseSpeed</a> : Number<div class="summaryTableDescription">[read-only] 
 		 マウスの現在の移動速度を取得する
+		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#mouseUpCount" class="signatureLink">mouseUpCount</a> : int<div class="summaryTableDescription">[read-only] 
+		 onMouseUpの呼び出し回数を取得する
 		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#mouseX" class="signatureLink">mouseX</a> : Number<div class="summaryTableDescription">[override] [read-only] 
 		 マウスの現在のx座標を取得する
 		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#mouseY" class="signatureLink">mouseY</a> : Number<div class="summaryTableDescription">[override] [read-only] 
 		 マウスの現在のy座標を取得する
+		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#moveBeginCount" class="signatureLink">moveBeginCount</a> : int<div class="summaryTableDescription">[read-only] 
+		 onMoveBeginの呼び出し回数を取得する
+		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#moveCount" class="signatureLink">moveCount</a> : int<div class="summaryTableDescription">[read-only] 
+		 onMoveの呼び出し回数を取得する
+		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#moveEndCount" class="signatureLink">moveEndCount</a> : int<div class="summaryTableDescription">[read-only] 
+		 onMoveEndの呼び出し回数を取得する
 		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#pmouseX" class="signatureLink">pmouseX</a> : Number<div class="summaryTableDescription">[read-only] 
 		 マウスの直前のx座標を取得する
 		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#pmouseY" class="signatureLink">pmouseY</a> : Number<div class="summaryTableDescription">[read-only] 
 		 マウスの直前のy座標を取得する
+		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#resizeCount" class="signatureLink">resizeCount</a> : int<div class="summaryTableDescription">[read-only] 
+		 onResizeの呼び出し回数を取得する
+		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#soundBeginCount" class="signatureLink">soundBeginCount</a> : int<div class="summaryTableDescription">[read-only] 
+		 onSoundBeginの呼び出し回数を取得する
+		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#soundCount" class="signatureLink">soundCount</a> : int<div class="summaryTableDescription">[read-only] 
+		 onSoundの呼び出し回数を取得する
+		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#soundEndCount" class="signatureLink">soundEndCount</a> : int<div class="summaryTableDescription">[read-only] 
+		 onSoundEndの呼び出し回数を取得する
 		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#stageHeight" class="signatureLink">stageHeight</a> : Number<div class="summaryTableDescription">[read-only] 
 		 ステージ全体の高さを取得する
 		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#stageWidth" class="signatureLink">stageWidth</a> : Number<div class="summaryTableDescription">[read-only] 
@@ -66,6 +88,11 @@
 		 小数部分を切り捨てて整数に変換する
 		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getBounds()" class="signatureLink">getBounds</a>(target:DisplayObject):Rectangle</div><div class="summaryTableDescription">[override] 
 		 オブジェクトの上下左右の端の座標を取得する
+		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#hideMouseCursor()" class="signatureLink">hideMouseCursor</a>():void</div><div class="summaryTableDescription">
+		 マウスカーソルを隠す
+		 
+		 hideMouseCursor();
+		 
 		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#max()" class="signatureLink">max</a>(... number):Number</div><div class="summaryTableDescription">
 		 複数の数値の中から最大値を見つける
 		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#mcGotoAndPlay()" class="signatureLink">mcGotoAndPlay</a>(target:MovieClip, frame:int):void</div><div class="summaryTableDescription">
@@ -76,8 +103,12 @@
 		 MovieClipを指定したフレーム移動させた後に停止する
 		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#mcHide()" class="signatureLink">mcHide</a>(target:MovieClip):void</div><div class="summaryTableDescription">
 		 MovieClipを非表示にする
+		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#mcLoop()" class="signatureLink">mcLoop</a>(target:MovieClip):void</div><div class="summaryTableDescription">
+		 MovieClipをループ再生モードにする
 		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#mcNext()" class="signatureLink">mcNext</a>(target:MovieClip):void</div><div class="summaryTableDescription">
 		 MovieClipを1フレーム進めて停止する
+		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#mcNoLoop()" class="signatureLink">mcNoLoop</a>(target:MovieClip):void</div><div class="summaryTableDescription">
+		 MovieClipを一回再生モードにする
 		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#mcPlay()" class="signatureLink">mcPlay</a>(target:MovieClip):void</div><div class="summaryTableDescription">
 		 MovieClipを再生する
 		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#mcPrev()" class="signatureLink">mcPrev</a>(target:MovieClip):void</div><div class="summaryTableDescription">
@@ -104,6 +135,11 @@
 		 オブジェクトの色をHSV値で指定して変更する
 		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setColorRGB()" class="signatureLink">setColorRGB</a>(target:DisplayObject, r:uint, g:uint, b:uint):void</div><div class="summaryTableDescription">
 		 オブジェクトの色をRGB値で指定して変更する
+		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#showMouseCursor()" class="signatureLink">showMouseCursor</a>():void</div><div class="summaryTableDescription">
+		 マウスカーソルを表示する
+		 
+		 showMouseCursor();
+		 
 		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#sin()" class="signatureLink">sin</a>(angle:Number):Number</div><div class="summaryTableDescription">
 		 サイン関数を計算する
 		 </div></td><td class="summaryTableOwnerCol">App</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#sqrt()" class="signatureLink">sqrt</a>(number:Number):Number</div><div class="summaryTableDescription">
@@ -113,8 +149,10 @@
 		 </div></td><td class="summaryTableOwnerCol">App</td></tr></table></div><a name="constantSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Constants</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#PI" class="signatureLink">PI</a> : Number = 3.141592653589793<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">App</td></tr></table></div><script language="javascript" type="text/javascript"><!--
 										showHideInherited();
 										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="clickCount"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">clickCount</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>clickCount:int</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
-		 マウスの現在のクリック回数を取得する
-		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get clickCount():int</code><br/></div><a name="propertyDetail"></a><a name="frameCount"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">frameCount</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>frameCount:int</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 onClickの呼び出し回数を取得する
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get clickCount():int</code><br/></div><a name="propertyDetail"></a><a name="dragCount"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">dragCount</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>dragCount:int</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 onDragの呼び出し回数を取得する
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get dragCount():int</code><br/></div><a name="propertyDetail"></a><a name="frameCount"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">frameCount</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>frameCount:int</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
 		 プログラムを起動してから経過したフレーム数
 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get frameCount():int</code><br/></div><a name="propertyDetail"></a><a name="frameRate"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">frameRate</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>frameRate:Number</code><p></p><p></p><p>
 		 フレームレートを取得 / 設定する
@@ -122,21 +160,41 @@
 		 現在マウスのボタンが押されているかどうかを取得する
 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isMouseDown():Boolean</code><br/></div><a name="propertyDetail"></a><a name="isMouseDragging"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isMouseDragging</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isMouseDragging:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
 		 現在マウスがドラッグされているかどうかを取得する
-		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isMouseDragging():Boolean</code><br/></div><a name="propertyDetail"></a><a name="milliSeconds"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">milliSeconds</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>milliSeconds:int</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isMouseDragging():Boolean</code><br/></div><a name="propertyDetail"></a><a name="keyDownCount"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">keyDownCount</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>keyDownCount:int</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 onKeyDownの呼び出し回数を取得する
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get keyDownCount():int</code><br/></div><a name="propertyDetail"></a><a name="keyUpCount"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">keyUpCount</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>keyUpCount:int</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 onKeyUpの呼び出し回数を取得する
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get keyUpCount():int</code><br/></div><a name="propertyDetail"></a><a name="milliSeconds"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">milliSeconds</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>milliSeconds:int</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
 		 プログラムを起動してから経過したミリ秒数を取得する
-		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get milliSeconds():int</code><br/></div><a name="propertyDetail"></a><a name="mouseCursorState"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">mouseCursorState</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>mouseCursorState:Boolean</code><p></p><p></p><p>
-		 マウスカーソルの状態(trueの場合は現在表示されている)を取得 / 設定する
-		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get mouseCursorState():Boolean</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set mouseCursorState(value:Boolean):void</code><br/></div><a name="propertyDetail"></a><a name="mouseSpeed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">mouseSpeed</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>mouseSpeed:Number</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get milliSeconds():int</code><br/></div><a name="propertyDetail"></a><a name="mouseDownCount"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">mouseDownCount</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>mouseDownCount:int</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 onMouseDownの呼び出し回数を取得する
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get mouseDownCount():int</code><br/></div><a name="propertyDetail"></a><a name="mouseSpeed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">mouseSpeed</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>mouseSpeed:Number</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
 		 マウスの現在の移動速度を取得する
-		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get mouseSpeed():Number</code><br/></div><a name="propertyDetail"></a><a name="mouseX"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">mouseX</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>mouseX:Number</code>&nbsp;&nbsp;[read-only] [override] <p></p><p></p><p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get mouseSpeed():Number</code><br/></div><a name="propertyDetail"></a><a name="mouseUpCount"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">mouseUpCount</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>mouseUpCount:int</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 onMouseUpの呼び出し回数を取得する
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get mouseUpCount():int</code><br/></div><a name="propertyDetail"></a><a name="mouseX"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">mouseX</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>mouseX:Number</code>&nbsp;&nbsp;[read-only] [override] <p></p><p></p><p>
 		 マウスの現在のx座標を取得する
 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get mouseX():Number</code><br/></div><a name="propertyDetail"></a><a name="mouseY"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">mouseY</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>mouseY:Number</code>&nbsp;&nbsp;[read-only] [override] <p></p><p></p><p>
 		 マウスの現在のy座標を取得する
-		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get mouseY():Number</code><br/></div><a name="propertyDetail"></a><a name="pmouseX"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">pmouseX</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>pmouseX:Number</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get mouseY():Number</code><br/></div><a name="propertyDetail"></a><a name="moveBeginCount"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">moveBeginCount</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>moveBeginCount:int</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 onMoveBeginの呼び出し回数を取得する
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get moveBeginCount():int</code><br/></div><a name="propertyDetail"></a><a name="moveCount"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">moveCount</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>moveCount:int</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 onMoveの呼び出し回数を取得する
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get moveCount():int</code><br/></div><a name="propertyDetail"></a><a name="moveEndCount"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">moveEndCount</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>moveEndCount:int</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 onMoveEndの呼び出し回数を取得する
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get moveEndCount():int</code><br/></div><a name="propertyDetail"></a><a name="pmouseX"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">pmouseX</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>pmouseX:Number</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
 		 マウスの直前のx座標を取得する
 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get pmouseX():Number</code><br/></div><a name="propertyDetail"></a><a name="pmouseY"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">pmouseY</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>pmouseY:Number</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
 		 マウスの直前のy座標を取得する
-		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get pmouseY():Number</code><br/></div><a name="propertyDetail"></a><a name="stageHeight"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">stageHeight</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>stageHeight:Number</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get pmouseY():Number</code><br/></div><a name="propertyDetail"></a><a name="resizeCount"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">resizeCount</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>resizeCount:int</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 onResizeの呼び出し回数を取得する
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get resizeCount():int</code><br/></div><a name="propertyDetail"></a><a name="soundBeginCount"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">soundBeginCount</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>soundBeginCount:int</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 onSoundBeginの呼び出し回数を取得する
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get soundBeginCount():int</code><br/></div><a name="propertyDetail"></a><a name="soundCount"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">soundCount</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>soundCount:int</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 onSoundの呼び出し回数を取得する
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get soundCount():int</code><br/></div><a name="propertyDetail"></a><a name="soundEndCount"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">soundEndCount</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>soundEndCount:int</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 onSoundEndの呼び出し回数を取得する
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get soundEndCount():int</code><br/></div><a name="propertyDetail"></a><a name="stageHeight"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">stageHeight</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>stageHeight:Number</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
 		 ステージ全体の高さを取得する
 		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get stageHeight():Number</code><br/></div><a name="propertyDetail"></a><a name="stageWidth"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">stageWidth</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>stageWidth:Number</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
 		 ステージ全体の幅を取得する
@@ -224,7 +282,12 @@
          trace("right  ", bounds.right);
          trace("");
          </pre></div>
-		 </div></div><a name="max()"></a><a name="max(restParam)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">max</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function max(... number):Number</code><p></p><p></p><p>
+		 </div></div><a name="hideMouseCursor()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">hideMouseCursor</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function hideMouseCursor():void</code><p></p><p></p><p>
+		 マウスカーソルを隠す
+		 <div class="listing" version="3.0"><pre>
+         hideMouseCursor();
+         </pre></div>
+		 </p></div><a name="max()"></a><a name="max(restParam)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">max</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function max(... number):Number</code><p></p><p></p><p>
 		 複数の数値の中から最大値を見つける
 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code>... <span class="label">number</span></code> &mdash; 複数の数値
 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Number</code> &mdash; 見つかった最大値
@@ -259,12 +322,26 @@
 		 <div class="listing" version="3.0"><pre>
          mcShow(ball);
          </pre></div>
+		 </div></div><a name="mcLoop()"></a><a name="mcLoop(flash.display.MovieClip)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">mcLoop</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function mcLoop(target:MovieClip):void</code><p></p><p></p><p>
+		 MovieClipをループ再生モードにする
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">target</span>:MovieClip</code> &mdash; 操作対象のMovieClip
+		 </td></tr></table></p><br/><span class="label"> Example </span><br/><div class="detailBody">以下の例では、ballというインスタンス名のMovieClipを操作しています。
+		 <div class="listing" version="3.0"><pre>
+         mcLoop(ball);
+         </pre></div>
 		 </div></div><a name="mcNext()"></a><a name="mcNext(flash.display.MovieClip)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">mcNext</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function mcNext(target:MovieClip):void</code><p></p><p></p><p>
 		 MovieClipを1フレーム進めて停止する
 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">target</span>:MovieClip</code> &mdash; 操作対象のMovieClip
 		 </td></tr></table></p><br/><span class="label"> Example </span><br/><div class="detailBody">以下の例では、ballというインスタンス名のMovieClipを操作しています。
 		 <div class="listing" version="3.0"><pre>
          mcPlay(ball);
+         </pre></div>
+		 </div></div><a name="mcNoLoop()"></a><a name="mcNoLoop(flash.display.MovieClip)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">mcNoLoop</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function mcNoLoop(target:MovieClip):void</code><p></p><p></p><p>
+		 MovieClipを一回再生モードにする
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">target</span>:MovieClip</code> &mdash; 操作対象のMovieClip
+		 </td></tr></table></p><br/><span class="label"> Example </span><br/><div class="detailBody">以下の例では、ballというインスタンス名のMovieClipを操作しています。
+		 <div class="listing" version="3.0"><pre>
+         mcNoLoop(ball);
          </pre></div>
 		 </div></div><a name="mcPlay()"></a><a name="mcPlay(flash.display.MovieClip)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">mcPlay</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function mcPlay(target:MovieClip):void</code><p></p><p></p><p>
 		 MovieClipを再生する
@@ -359,7 +436,12 @@
 		 <div class="listing" version="3.0"><pre>
          setColorRGB(ball, 100, 56, 255);
          </pre></div>
-		 </div></div><a name="sin()"></a><a name="sin(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">sin</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function sin(angle:Number):Number</code><p></p><p></p><p>
+		 </div></div><a name="showMouseCursor()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">showMouseCursor</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function showMouseCursor():void</code><p></p><p></p><p>
+		 マウスカーソルを表示する
+		 <div class="listing" version="3.0"><pre>
+         showMouseCursor();
+         </pre></div>
+		 </p></div><a name="sin()"></a><a name="sin(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">sin</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function sin(angle:Number):Number</code><p></p><p></p><p>
 		 サイン関数を計算する
 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">angle</span>:Number</code> &mdash; 入力するラジアン角度
 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Number</code> &mdash; 計算結果
@@ -371,4 +453,4 @@
 		 タンジェント関数を計算する
 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">angle</span>:Number</code> &mdash; 入力するラジアン角度
 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Number</code> &mdash; 計算結果
-		 </td></tr></table></div><div class="detailSectionHeader">Constant Detail</div><a name="constantDetail"></a><a name="PI"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">PI</td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const PI:Number = 3.141592653589793</code><p></p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer></footer><br/>Thu Sep 8 2016, 06:29 PM +09:00  </center></div></body></html><!--<br/>Thu Sep 8 2016, 06:29 PM +09:00  -->
+		 </td></tr></table></div><div class="detailSectionHeader">Constant Detail</div><a name="constantDetail"></a><a name="PI"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">PI</td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const PI:Number = 3.141592653589793</code><p></p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer></footer><br/>Sun Oct 30 2016, 05:37 PM +09:00  </center></div></body></html><!--<br/>Sun Oct 30 2016, 05:37 PM +09:00  -->

@@ -50,6 +50,9 @@ package core.reactor
 					_minActivityLevel = 0.1;
 
 					_isSoundOn = false;
+					_soundBeginCount = 0;
+					_soundCount = 0;
+					_soundEndCount = 0;
 					EnterFrameIntegrator.addEventListener(_enterFrameHandler);
 				}
 			}
@@ -60,6 +63,39 @@ package core.reactor
 		//   Property 
 		//
 		//----------------------------------------------------------
+
+		//--------------------------------------
+		// soundBeginCount 
+		//--------------------------------------
+
+		private var _soundBeginCount:int;
+
+		public function get soundBeginCount():int
+		{
+			return _soundBeginCount;
+		}
+
+		//--------------------------------------
+		// soundCount 
+		//--------------------------------------
+
+		private var _soundCount:int;
+
+		public function get soundCount():int
+		{
+			return _soundCount;
+		}
+
+		//--------------------------------------
+		// soundEndCount 
+		//--------------------------------------
+
+		private var _soundEndCount:int;
+
+		public function get soundEndCount():int
+		{
+			return _soundEndCount;
+		}
 
 		private var _isSoundOn:Boolean;
 		private var _mean:Mean;
@@ -79,10 +115,14 @@ package core.reactor
 			if (meanVolume > 0)
 			{
 				if (_isSoundOn)
+				{
+					++_soundCount;
 					delegate.onSound.execute(meanVolume);
+				}
 				else
 				{
 					_isSoundOn = true;
+					++_soundBeginCount;
 					delegate.onSoundBegin.execute(meanVolume);
 				}
 			}
@@ -91,6 +131,7 @@ package core.reactor
 				if (_isSoundOn)
 				{
 					_isSoundOn = false;
+					++_soundEndCount;
 					delegate.onSoundEnd.execute();
 				}
 			}

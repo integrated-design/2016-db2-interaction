@@ -1,4 +1,4 @@
-package core.animation
+package core.controller
 {
 	import flash.display.MovieClip;
 	import flash.events.Event;
@@ -48,9 +48,8 @@ package core.animation
 		public function MovieClipController(target:MovieClip):void
 		{
 			_target = target;
-
-			//NOTE: stop()をplay()にする
-			stop();
+			_isLoop = true;
+			play();
 		}
 
 		//----------------------------------------------------------
@@ -59,6 +58,7 @@ package core.animation
 		//
 		//----------------------------------------------------------
 
+		private var _isLoop:Boolean;
 		private var _mode:int;
 		private var _target:MovieClip;
 
@@ -123,7 +123,7 @@ package core.animation
 		public function next():void
 		{
 			show();
-			_gotoNextFrame(true);
+			_gotoNextFrame(_isLoop);
 			_mode = MODE_STOP;
 			EnterFrameIntegrator.removeEventListener(_enterFrameHandler);
 		}
@@ -131,7 +131,7 @@ package core.animation
 		public function prev():void
 		{
 			show();
-			_gotoPrevFrame(true);
+			_gotoPrevFrame(_isLoop);
 			_mode = MODE_STOP;
 			EnterFrameIntegrator.removeEventListener(_enterFrameHandler);
 		}
@@ -146,12 +146,22 @@ package core.animation
 			_target.visible = false;
 		}
 
+		public function loop():void
+		{
+			_isLoop = true;
+		}
+
+		public function noLoop():void
+		{
+			_isLoop = false;
+		}
+
 		private function _enterFrameHandler(event:Event):void
 		{
 			if (_mode == MODE_PLAY)
-				_gotoNextFrame(true);
+				_gotoNextFrame(_isLoop);
 			else if (_mode == MODE_REVERSE)
-				_gotoPrevFrame(true);
+				_gotoPrevFrame(_isLoop);
 		}
 
 		private function _gotoNextFrame(loop:Boolean):void

@@ -47,14 +47,21 @@ package core.reactor
 
 			_stage = stage;
 
-			_pmouseX = _mouseX = stage.mouseX;
-			_pmouseY = _mouseY = stage.mouseY;
+			_pmouseX = _mouseX = -1;
+			_pmouseY = _mouseY = -1;
 			_vmouseX = _vmouseY = 0;
 			_mouseSpeed = 0;
 			_clickCount = 0;
+			_mouseDownCount = 0;
+			_mouseUpCount = 0;
+			_mouseMoveBeginCount = 0;
+			_mouseMoveCount = 0;
+			_mouseMoveEndCount = 0;
+			_mouseDragCount = 0;
 			_isMouseDown = false;
 			_isMouseMoving = false;
 			_isMouseDragging = false;
+			_hasNativeMouseMoved = false;
 
 			_stage.addEventListener(MouseEvent.CLICK, _mouseClickHandler);
 			_stage.addEventListener(MouseEvent.MOUSE_DOWN, _mouseDownHandler);
@@ -114,6 +121,61 @@ package core.reactor
 		}
 
 		//--------------------------------------
+		// mouseDownCount 
+		//--------------------------------------
+
+		private var _mouseDownCount:int;
+
+		public function get mouseDownCount():int
+		{
+			return _mouseDownCount;
+		}
+
+		//--------------------------------------
+		// mouseDragCount 
+		//--------------------------------------
+
+		private var _mouseDragCount:int;
+
+		public function get mouseDragCount():int
+		{
+			return _mouseDragCount;
+		}
+
+		//--------------------------------------
+		// mouseMoveBeginCount 
+		//--------------------------------------
+
+		private var _mouseMoveBeginCount:int;
+
+		public function get mouseMoveBeginCount():int
+		{
+			return _mouseMoveBeginCount;
+		}
+
+		//--------------------------------------
+		// mouseMoveCount 
+		//--------------------------------------
+
+		private var _mouseMoveCount:int;
+
+		public function get mouseMoveCount():int
+		{
+			return _mouseMoveCount;
+		}
+
+		//--------------------------------------
+		// mouseMoveEndCount 
+		//--------------------------------------
+
+		private var _mouseMoveEndCount:int;
+
+		public function get mouseMoveEndCount():int
+		{
+			return _mouseMoveEndCount;
+		}
+
+		//--------------------------------------
 		// mouseSpeed 
 		//--------------------------------------
 
@@ -122,6 +184,17 @@ package core.reactor
 		public function get mouseSpeed():Number
 		{
 			return _mouseSpeed;
+		}
+
+		//--------------------------------------
+		// mouseUpCount 
+		//--------------------------------------
+
+		private var _mouseUpCount:int;
+
+		public function get mouseUpCount():int
+		{
+			return _mouseUpCount;
 		}
 
 		//--------------------------------------
@@ -190,6 +263,8 @@ package core.reactor
 			return _vmouseY;
 		}
 
+		private var _hasNativeMouseMoved:Boolean;
+
 		private var _stage:Stage;
 
 		//----------------------------------------------------------
@@ -200,6 +275,9 @@ package core.reactor
 
 		private function _enterFrameHandler(event:Event):void
 		{
+			if (!_hasNativeMouseMoved)
+				return;
+
 			var isMouseMoved:Boolean = false;
 			if (_mouseX != _stage.mouseX || _mouseY != _stage.mouseY)
 			{
@@ -222,21 +300,29 @@ package core.reactor
 					_isMouseDragging = true;
 
 				if (_isMouseMoving)
+				{
+					++_mouseMoveCount;
 					delegate.onMouseMove.execute(_mouseX, _mouseY);
+				}
 				else
 				{
 					_isMouseMoving = true;
+					++_mouseMoveBeginCount;
 					delegate.onMouseMoveBegin.execute(_mouseX, _mouseY);
 				}
 
 				if (_isMouseDragging)
+				{
+					++_mouseDragCount;
 					delegate.onMouseDrag.execute(_mouseX, _mouseY);
+				}
 			}
 			else
 			{
 				if (_isMouseMoving)
 				{
 					_isMouseMoving = false;
+					++_mouseMoveEndCount;
 					delegate.onMouseMoveEnd.execute(_mouseX, _mouseY);
 				}
 			}
@@ -251,17 +337,25 @@ package core.reactor
 		private function _mouseDownHandler(event:MouseEvent):void
 		{
 			_isMouseDown = true;
+			++_mouseDownCount;
 			delegate.onMouseDown.execute(_mouseX, _mouseY);
 		}
 
 		private function _mouseMoveHandler(event:MouseEvent):void
 		{
+			if (!_hasNativeMouseMoved)
+			{
+				_hasNativeMouseMoved = true;
+				_pmouseX = _mouseX = _stage.mouseX;
+				_pmouseY = _mouseY = _stage.mouseY;
+			}
 		}
 
 		private function _mouseUpHandler(event:MouseEvent):void
 		{
 			_isMouseDown = false;
 			_isMouseDragging = false;
+			++_mouseUpCount;
 			delegate.onMouseUp.execute(_mouseX, _mouseY);
 		}
 	}

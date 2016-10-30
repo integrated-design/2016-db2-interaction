@@ -14,9 +14,8 @@ package
 	import flash.ui.Mouse;
 	import flash.utils.getTimer;
 
-	import core.animation.MovieClipController;
+	import core.controller.MovieClipController;
 	import core.delegate.DelegateCollector;
-	import core.vars.Config;
 	import core.reactor.CameraReactor;
 	import core.reactor.KeyboardReactor;
 	import core.reactor.MouseReactor;
@@ -25,6 +24,7 @@ package
 	import core.util.ColorUtil;
 	import core.util.EnterFrameIntegrator;
 	import core.util.Logger;
+	import core.vars.Config;
 
 	/**
 	 * 多摩美術大学統合デザイン学科 デザインベーシックⅡ インタラクション
@@ -77,11 +77,19 @@ package
 		//----------------------------------------------------------
 
 		/**
-		 * マウスの現在のクリック回数を取得する
+		 * onClickの呼び出し回数を取得する
 		 */
 		public function get clickCount():int
 		{
 			return _mouseReactor.clickCount;
+		}
+
+		/**
+		 * onDragの呼び出し回数を取得する
+		 */
+		public function get dragCount():int
+		{
+			return _mouseReactor.mouseDragCount;
 		}
 
 		//--------------------------------------
@@ -140,6 +148,22 @@ package
 			return _mouseReactor.isMouseDragging;
 		}
 
+		/**
+		 * onKeyDownの呼び出し回数を取得する
+		 */
+		public function get keyDownCount():int
+		{
+			return _keyboardReactor.keyDownCount;
+		}
+
+		/**
+		 * onKeyUpの呼び出し回数を取得する
+		 */
+		public function get keyUpCount():int
+		{
+			return _keyboardReactor.keyUpCount;
+		}
+
 		//--------------------------------------
 		// milliSeconds 
 		//--------------------------------------
@@ -153,26 +177,13 @@ package
 		{
 			return _milliSeconds;
 		}
-		//--------------------------------------
-		// mouseCursor State
-		//--------------------------------------
-
-		private var _mouseCursorState:Boolean;
 
 		/**
-		 * マウスカーソルの状態(trueの場合は現在表示されている)を取得 / 設定する
+		 * onMouseDownの呼び出し回数を取得する
 		 */
-		public function get mouseCursorState():Boolean
+		public function get mouseDownCount():int
 		{
-			return _mouseCursorState;
-		}
-
-		public function set mouseCursorState(value:Boolean):void
-		{
-			if (value == _mouseCursorState)
-				return;
-			_mouseCursorState = value;
-			_mouseCursorState ? Mouse.show() : Mouse.hide();
+			return _mouseReactor.mouseDownCount;
 		}
 
 		/**
@@ -181,6 +192,14 @@ package
 		public function get mouseSpeed():Number
 		{
 			return _mouseReactor.mouseSpeed;
+		}
+
+		/**
+		 * onMouseUpの呼び出し回数を取得する
+		 */
+		public function get mouseUpCount():int
+		{
+			return _mouseReactor.mouseUpCount;
 		}
 
 		/**
@@ -200,6 +219,30 @@ package
 		}
 
 		/**
+		 * onMoveBeginの呼び出し回数を取得する
+		 */
+		public function get moveBeginCount():int
+		{
+			return _mouseReactor.mouseMoveBeginCount;
+		}
+
+		/**
+		 * onMoveの呼び出し回数を取得する
+		 */
+		public function get moveCount():int
+		{
+			return _mouseReactor.mouseMoveCount;
+		}
+
+		/**
+		 * onMoveEndの呼び出し回数を取得する
+		 */
+		public function get moveEndCount():int
+		{
+			return _mouseReactor.mouseMoveEndCount;
+		}
+
+		/**
 		 * マウスの直前のx座標を取得する
 		 */
 		public function get pmouseX():Number
@@ -213,6 +256,38 @@ package
 		public function get pmouseY():Number
 		{
 			return _mouseReactor.pmouseY;
+		}
+
+		/**
+		 * onResizeの呼び出し回数を取得する
+		 */
+		public function get resizeCount():int
+		{
+			return _resizeReactor.resizeCount;
+		}
+
+		/**
+		 * onSoundBeginの呼び出し回数を取得する
+		 */
+		public function get soundBeginCount():int
+		{
+			return _soundReactor.soundBeginCount;
+		}
+
+		/**
+		 * onSoundの呼び出し回数を取得する
+		 */
+		public function get soundCount():int
+		{
+			return _soundReactor.soundCount;
+		}
+
+		/**
+		 * onSoundEndの呼び出し回数を取得する
+		 */
+		public function get soundEndCount():int
+		{
+			return _soundReactor.soundEndCount;
 		}
 
 		//--------------------------------------
@@ -272,6 +347,12 @@ package
 
 		private var _cameraReactor:CameraReactor;
 		private var _delegate:DelegateCollector;
+
+		//--------------------------------------
+		// mouseCursorState 
+		//--------------------------------------
+
+		private var _isMouseCursorVisible:Boolean;
 		private var _keyboardReactor:KeyboardReactor;
 		private var _mouseReactor:MouseReactor;
 		private var _resizeReactor:ResizeReactor;
@@ -283,6 +364,34 @@ package
 		//   Function 
 		//
 		//----------------------------------------------------------
+
+		/**
+		 * マウスカーソルを表示する
+		 * <listing version="3.0">
+		 * showMouseCursor();
+		 * </listing>
+		 */
+		public function showMouseCursor():void
+		{
+			if (_isMouseCursorVisible)
+				return;
+			_isMouseCursorVisible = true;
+			Mouse.show();
+		}
+
+		/**
+		 * マウスカーソルを隠す
+		 * <listing version="3.0">
+		 * hideMouseCursor();
+		 * </listing>
+		 */
+		public function hideMouseCursor():void
+		{
+			if (!_isMouseCursorVisible)
+				return;
+			_isMouseCursorVisible = false;
+			Mouse.hide();
+		}
 
 		/**
 		 * フレームスクリプトの記述を許容するが実行はしない
@@ -713,6 +822,34 @@ package
 		}
 
 		/**
+		 * MovieClipをループ再生モードにする
+		 * @param target 操作対象のMovieClip
+		 * @example 以下の例では、ballというインスタンス名のMovieClipを操作しています。
+		 * <listing version="3.0">
+		 * mcLoop(ball);
+		 * </listing>
+		 */
+		public function mcLoop(target:MovieClip):void
+		{
+			var controller:MovieClipController = MovieClipController.register(target);
+			controller.loop();
+		}
+
+		/**
+		 * MovieClipを一回再生モードにする
+		 * @param target 操作対象のMovieClip
+		 * @example 以下の例では、ballというインスタンス名のMovieClipを操作しています。
+		 * <listing version="3.0">
+		 * mcNoLoop(ball);
+		 * </listing>
+		 */
+		public function mcNoLoop(target:MovieClip):void
+		{
+			var controller:MovieClipController = MovieClipController.register(target);
+			controller.noLoop();
+		}
+
+		/**
 		 * オブジェクトの上下左右の端の座標を取得する
 		 * @param target 座標を取得する対象の表示オブジェクト
 		 * @return 上下左右の端の座標を格納したオブジェクトを返します。
@@ -755,7 +892,7 @@ package
 			//
 			_milliSeconds = 0;
 			_frameCount = 0;
-			_mouseCursorState = true;
+			_isMouseCursorVisible = true;
 
 			//
 			_mouseReactor = new MouseReactor(_delegate, _stage);

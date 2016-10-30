@@ -13,7 +13,7 @@
     <classEntry path="core.util.ColorUtil"/>
     <classEntry path="core.util.EnterFrameIntegrator"/>
     <classEntry path="core.util.Logger"/>
-    <classEntry path="core.animation.MovieClipController"/>
+    <classEntry path="core.controller.MovieClipController"/>
     <classEntry path="core.util.MathUtil"/>
     <classEntry path="core.util.Mean"/>
   </includeClasses>

@@ -29,8 +29,39 @@ package core.reactor
 		{
 			super(delegate);
 
+			_keyDownCount = 0;
+			_keyUpCount = 0;
+
 			stage.addEventListener(KeyboardEvent.KEY_DOWN, _keyDownHandler);
 			stage.addEventListener(KeyboardEvent.KEY_UP, _keyUpHandler);
+		}
+
+		//----------------------------------------------------------
+		//
+		//   Property 
+		//
+		//----------------------------------------------------------
+
+		//--------------------------------------
+		// keuDownCount 
+		//--------------------------------------
+
+		private var _keyDownCount:int;
+
+		public function get keyDownCount():int
+		{
+			return _keyDownCount;
+		}
+
+		//--------------------------------------
+		// keyUpCount 
+		//--------------------------------------
+
+		private var _keyUpCount:int;
+
+		public function get keyUpCount():int
+		{
+			return _keyUpCount;
 		}
 
 		//----------------------------------------------------------
@@ -41,11 +72,13 @@ package core.reactor
 
 		private function _keyDownHandler(event:KeyboardEvent):void
 		{
+			++_keyDownCount;
 			delegate.onKeyDown.execute(_getKeyString(event.keyCode));
 		}
 
 		private function _keyUpHandler(event:KeyboardEvent):void
 		{
+			++_keyUpCount;
 			delegate.onKeyUp.execute(_getKeyString(event.keyCode));
 		}
 
