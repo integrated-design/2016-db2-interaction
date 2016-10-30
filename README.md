@@ -8,6 +8,8 @@
 # Latest package and examples
 [Download 2.0.3](https://github.com/integrated-design/2016-db2-interaction/raw/master/package/2.0.3.zip)
 
+[リファレンス](https://integrated-design.github.io/2016-db2-interaction/App.html)
+
 # Release note
 * 2.0.3
  * 起動直後に再生時にマウスがステージ上にあった場合にonMoveBeginとonMoveEndが呼び出されるのを回避 (バグ修正)
