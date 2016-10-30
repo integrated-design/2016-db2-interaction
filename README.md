@@ -8,7 +8,7 @@
 # Latest package and examples
 [Download 2.0.3](https://github.com/integrated-design/2016-db2-interaction/raw/master/package/2.0.3.zip)
 
-[リファレンス](https://integrated-design.github.io/2016-db2-interaction/App.html)
+[API Reference 2.0.3](https://integrated-design.github.io/2016-db2-interaction/App.html)
 
 # Release note
 * 2.0.3
