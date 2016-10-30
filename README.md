@@ -25,5 +25,5 @@
 * 2.0.1
  * MovieClipController登録時の初MovieClip期状態をstopからplayに変更 (バグ修正)
 
- * 2.0.0
+* 2.0.0
  * 1stリリース
