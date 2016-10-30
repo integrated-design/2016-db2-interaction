@@ -15,7 +15,7 @@
  * 起動直後に再生時にマウスがステージ上にあった場合にonMoveBeginとonMoveEndが呼び出されるのを回避 (バグ修正)
  * MovieClipController登録時のMovieClip初期状態をstopからplayに変更 (バグ修正)
  * onClick以外のonAbc系のイベントが呼ばれた回数をabcCountとして取得する変数を追加 (機能追加)
- * MouseCursorVisibleを廃止して、showMouseCursor / hideMouseCursor関数を追加 (機能廃止 / 機能追加)
+ * mouseCursorStateを廃止して、showMouseCursor / hideMouseCursor関数を追加 (機能廃止 / 機能追加)
  * MovieClipのループ再生モード / 一回再生モードを切り替えるためのmcLoop / mcNoLoop関数を追加 (機能追加)
 
 * 2.0.2
