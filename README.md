@@ -97,15 +97,15 @@ aを1フレーム戻します。
 aを表示します。
 mcPlay、mcReverse、mcGotoAndPlay、mcGotoAndReverse、mcNext、mcPrevを呼んだ場合には自動的に呼ばれます。
 
-### mcHide(mc);
-mcを非表示にします。
+### mcHide(a);
+aを非表示にします。
 非表示にするだけなので、見えないだけで再生状態は保持されます。
 
-### mcLoop(mc);
-mcをループ再生モードにします。デフォルトでは既にループ再生モードになっています。
+### mcLoop(a);
+aをループ再生モードにします。デフォルトでは既にループ再生モードになっています。
 
-### mcNoLoop(mc);
-mcを一回再生モードにします。mcPlay、mcReverse、mcGotoAndPlay、mcGotoAndReverse、mcNext、mcPrevで端のフレームに到達した場合にループ再生がされなくなります。
+### mcNoLoop(a);
+aを一回再生モードにします。mcPlay、mcReverse、mcGotoAndPlay、mcGotoAndReverse、mcNext、mcPrevで端のフレームに到達した場合にループ再生がされなくなります。
 
 
 # デバッグ
