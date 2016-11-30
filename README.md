@@ -14,64 +14,20 @@
 # 入力と出力
 本プログラミング教材では、様々な入力と出力を組み合わせることで、インタラクティブなアニメーションを作ることを目的としています。
 入力としてマウス、キーボード、サウンド（マイク）を用意しています。出力としては、様々なアニメーション操作方法を用意しています。
-以下に具体的な入力と出力の実装方法を記します。
-
-## 入力（マウス）
-
-## 入力（キーボード）
-
-## 入力（サウンド）
-
-## 入力（回数）
-色々な関数（function）が呼び出された回数を使って、プログラムを書くことができます。
-例えば、onClickが呼び出された回数（クリックされた回数）は、clickCountとして取得することができます。これによって「10回以上クリックされたらこのアニメーションを再生する」「クリックされる毎に2つのアニメーションaとbを交互に再生する」といった複雑な制御が可能となります。
-関数と、それが呼び出された回数の対応関係は以下の通りです。
-
-関数 | 回数
---- | ---
-onClick | clickCount
-onMoveBegin | moveBeginCount
-onMove | moveCount
-onMoveEnd | moveEndCount
-onDrag | dragCount
-onMouseDown | mouseDownCount
-onMouseUp | mouseUpCount
-onKeyDown | keyDownCount
-onKeyUp | keyUpCount
-onSoundBegin | soundBeginCount
-onSound | soundCount
-onSoundEnd | soundEndCount
+以下に具体的な入力と出力の実装方法を、順を追って説明します。
 
 ## 出力
-setup、onClick、onMoveなど、任意の入力関数の中に書くことで、ステージに置かれているインスタンスを操作することができます。
+用意した様々な命令によって、ステージに置かれているインスタンスを操作することができます。
 カッコ()の中のaはステージに置かれているインスタンスの名前です。動かしたいインスタンスの名前に置き換えてください。
 
 ### mcPlay(a);
 aを現在のフレームから再生します。
-```
-// クリックしたらインスタンスaを再生する
-function onClick() {
-    mcPlay(a);
-}
-```
 
 ### mcReverse(a);
 aを現在のフレームから逆再生します。
-```
-// クリックしたらインスタンスaを逆再生する
-function onClick() {
-    mcReverse(a);
-}
-```
 
 ### mcStop(a);
 aの再生を停止します。
-```
-// クリックしたらインスタンスaを停止する
-function onClick() {
-    mcStop(a);
-}
-```
 
 ### mcStopAndHide(a);
 aの再生を停止して非表示にします。
@@ -108,7 +64,53 @@ aをループ再生モードにします。デフォルトでは既にループ�
 aを一回再生モードにします。mcPlay、mcReverse、mcGotoAndPlay、mcGotoAndReverse、mcNext、mcPrevで端のフレームに到達した場合にループ再生がされなくなります。
 
 
-# デバッグ
+## 初期化
+flaファイルにはsetupという関数が用意してあります。setupは起動直後に1度だけ処理されるので、アニメーションの初期状態（インスタンスaを止めて、インスタンスbをあらかじめ10フレームから再生しておく、など）を作ることができます。
+```
+//最初に一度だけ実行したい処理を書く
+function setup() {
+    //インスタンスaを止める
+    mcStop(a);
+    
+    //インスタンスbを10フレームから再生する
+    mcGotoAndPlay(b);
+}
+```
+
+## 入力
+入力とは、出力のきっかけとなる出来事です。「マウスをクリックしたら動き出す」「キーボードがたたかれたら表示する」などの「○○○たら〜〜〜」の○○○の部分です。
+
+### マウス
+TODO
+
+### キーボード
+TODO
+
+### サウンド
+TODO
+
+### 回数
+色々な関数（function）が呼び出された回数を使って、プログラムを書くことができます。
+例えば、onClickが呼び出された回数（クリックされた回数）は、clickCountとして取得することができます。これによって「10回以上クリックされたらこのアニメーションを再生する」「クリックされる毎に2つのアニメーションaとbを交互に再生する」といった複雑な制御が可能となります。
+関数と、それが呼び出された回数の対応関係は以下の通りです。
+
+関数 | 回数
+--- | ---
+onClick | clickCount
+onMoveBegin | moveBeginCount
+onMove | moveCount
+onMoveEnd | moveEndCount
+onDrag | dragCount
+onMouseDown | mouseDownCount
+onMouseUp | mouseUpCount
+onKeyDown | keyDownCount
+onKeyUp | keyUpCount
+onSoundBegin | soundBeginCount
+onSound | soundCount
+onSoundEnd | soundEndCount
+
+
+## デバッグ
 trace命令によって、実行中のプログラムの状態を知る事ができます。
 任意の関数の中にtrace命令を書くことで、Animateの出力パネルに情報を表示します。
 ```
